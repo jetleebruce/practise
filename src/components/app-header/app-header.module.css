@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    background: #1C1C21;
+    box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 
+    0px 16px 24px rgba(0, 0, 0, 0.04), 
+    0px 4px 8px rgba(0, 0, 0, 0.04), 
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.innerBox {
+    display: flex;
+  width: 100%;
+  padding: 33px 340px 33px 320px;
+}
+
+.burger {
+    display: flex;
+    align-items: center;
+}
+
+.order {
+    margin-left: 49px;
+    display: flex;
+    align-items: center;
+}
+
+.burgertext {
+    margin-left: 8px;
+}
+
+.ordertext {
+    color: #8585AD;
+    margin-left: 9px;
+}
+
+.logowrap {
+    margin-left: 132px;
+}
+
+.roomwrap {
+  display: flex;
+  align-items: center;
+  margin-left: 312px;
+}
+
+.roomtext {
+    margin-left: 11px;
+    color: #8585AD;
+}
