@@ -31,7 +31,8 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
           <p className="text text_type_main-small">Начинки</p>
         </div>
       </div>
-      <div>
+      <div className={ingredientsStyles.parent}>
+        <div className={ingredientsStyles.child}>
         <div>
           <span>
             <p className="text text_type_main-medium">Булки</p>
@@ -80,6 +81,7 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </div>
   );

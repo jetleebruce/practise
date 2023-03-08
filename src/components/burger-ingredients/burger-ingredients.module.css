@@ -35,3 +35,13 @@
 .card {
   width: 272px;
 }
+
+.parent {
+  height: 650px;
+  overflow: hidden;
+}
+
+.child {
+  height: 100%;
+  overflow-y: scroll;
+}
