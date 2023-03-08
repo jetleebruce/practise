@@ -36,6 +36,10 @@
   width: 272px;
 }
 
+.card:nth-child(odd) {
+  margin-right: 24px;
+}
+
 .parent {
   height: 650px;
   overflow: hidden;
@@ -44,4 +48,18 @@
 .child {
   height: 100%;
   overflow-y: scroll;
+}
+
+.child::-webkit-scrollbar {
+  width: 8px;
+}
+.child::-webkit-scrollbar-track {
+  background:  #2F2F37;
+  height: 364px; 
+}
+
+.child::-webkit-scrollbar-thumb {
+  background-color:  #8585AD;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #8585AD;  /* creates padding around scroll thumb */
 }
