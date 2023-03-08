@@ -8,13 +8,10 @@ type BurgerIngredientData = {
 };
 const BurgerIngredients = (data: BurgerIngredientData) => {
   const [ingredients] = useState(data);
-  const boolka = ingredients.data.filter((item: any) => item.type === "bun");
-  const soose = ingredients.data.filter((item: any) => item.type === "sauce");
-  const nachinka = ingredients.data.filter((item: any) => item.type === "main");
-  // console.log(boolka);
-  // console.log(soose);
-  // console.log(nachinka);
-  console.log("inBurger", ingredients);
+  const buns = ingredients.data.filter((item: any) => item.type === "bun");
+  const sauces = ingredients.data.filter((item: any) => item.type === "sauce");
+  const insides = ingredients.data.filter((item: any) => item.type === "main");
+
   return (
     <div className={ingredientsStyles.blockwrap}>
       <div className={ingredientsStyles.text}>
@@ -39,7 +36,7 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
           </span>
         </div>
         <div className={ingredientsStyles.cardwrap}>
-          {boolka.map((item: BurgerIngredient) => (
+          {buns.map((item: BurgerIngredient) => (
             <div key={item._id} className={ingredientsStyles.card}>
               <BurgerIngredientsCard
                 label={item.name}
@@ -55,7 +52,7 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
           </span>
         </div>
         <div className={ingredientsStyles.cardwrap}>
-          {soose.map((item: BurgerIngredient) => (
+          {sauces.map((item: BurgerIngredient) => (
             <div key={item._id} className={ingredientsStyles.card}>
               <BurgerIngredientsCard
                 label={item.name}
@@ -71,7 +68,7 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
           </span>
         </div>
         <div className={ingredientsStyles.cardwrap}>
-          {nachinka.map((item: BurgerIngredient) => (
+          {insides.map((item: BurgerIngredient) => (
             <div key={item._id} className={ingredientsStyles.card}>
               <BurgerIngredientsCard
                 label={item.name}
