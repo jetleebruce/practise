@@ -16,4 +16,5 @@
   .textwraper {
     display: flex;
     justify-content: center;
+    height: 48px;
   }
