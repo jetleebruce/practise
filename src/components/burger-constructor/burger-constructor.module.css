@@ -1,0 +1,70 @@
+.blockwrap {
+    margin: 0;
+    width: 600px;
+    margin-left: 40px;
+}
+
+.innerBox {
+    margin-top: 100px;
+    padding-left: 16px;
+}
+
+.parent {
+    overflow: hidden;
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.child > div:not(:last-child) {
+  max-height: 80px;
+  margin-bottom: 16px;
+}
+
+.child::-webkit-scrollbar {
+    width: 8px;
+  }
+  .child::-webkit-scrollbar-track {
+    background:  #2F2F37;
+    height: 364px; 
+  }
+  
+  .child::-webkit-scrollbar-thumb {
+    background-color:  #8585AD;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #8585AD;  /* creates padding around scroll thumb */
+  }
+
+  .order {
+    margin-top: 40px;
+  }
+
+  .orderBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+  }
+
+  .price p {
+    margin-right: 9.5px;
+  }
+
+  .orderButton button {
+    width: 215px;
+    height: 64px;
+    background: linear-gradient(63.18deg, #801AB3 0%, #4C4CFF 100%);
+    border-radius: 64px;
+    color: #F2F2F3;
+    cursor: pointer;
+  }

@@ -1,0 +1,20 @@
+.imagewrap {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .pricewrap {
+    display: flex;
+    justify-content: center
+  }
+  
+  .currencyIcon{ 
+    margin-left: 9px;
+  }
+  
+  .textwraper {
+    display: flex;
+    justify-content: center;
+    height: 48px;
+  }
