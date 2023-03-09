@@ -7,12 +7,13 @@ import BurgerIngredientsCard from "./burger-ingredients-card/burger-ingredients-
 type BurgerIngredientData = {
   data: BurgerIngredient[];
 };
+
 const BurgerIngredients = (data: BurgerIngredientData) => {
   const ingredients = data;
   const [current, setCurrent] = useState("one");
-  const buns = ingredients.data.filter((item: any) => item.type === "bun");
-  const sauces = ingredients.data.filter((item: any) => item.type === "sauce");
-  const insides = ingredients.data.filter((item: any) => item.type === "main");
+  const buns = ingredients.data.filter((item: BurgerIngredient) => item.type === "bun");
+  const sauces = ingredients.data.filter((item: BurgerIngredient) => item.type === "sauce");
+  const insides = ingredients.data.filter((item: BurgerIngredient) => item.type === "main");
 
   return (
     <div className={ingredientsStyles.blockwrap}>
