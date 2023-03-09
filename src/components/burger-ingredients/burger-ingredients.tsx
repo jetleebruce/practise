@@ -8,7 +8,7 @@ type BurgerIngredientData = {
   data: BurgerIngredient[];
 };
 const BurgerIngredients = (data: BurgerIngredientData) => {
-  const [ingredients] = useState(data);
+  const ingredients = data;
   const [current, setCurrent] = useState("one");
   const buns = ingredients.data.filter((item: any) => item.type === "bun");
   const sauces = ingredients.data.filter((item: any) => item.type === "sauce");
@@ -21,13 +21,13 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
       </div>
       <div style={{ display: "flex" }}>
         <Tab value="one" active={current === "one"} onClick={setCurrent}>
-          One
+          Булки
         </Tab>
         <Tab value="two" active={current === "two"} onClick={setCurrent}>
-          Two
+          Соусы
         </Tab>
         <Tab value="three" active={current === "three"} onClick={setCurrent}>
-          Three
+          Начинки
         </Tab>
       </div>
       <div className={ingredientsStyles.parent}>
