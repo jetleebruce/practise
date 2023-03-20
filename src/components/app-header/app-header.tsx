@@ -12,16 +12,20 @@ const AppHeader = () => {
       <div className={headertStyles.innerBox}>
         <div className={headertStyles.buttonswrap}>
           <div className={headertStyles.burger}>
-            <BurgerIcon type="primary" />
-            <span className={headertStyles.burgertext}>
-              <p className="text text_type_main-default">Конструктор</p>
-            </span>
+            <a href="/">
+              <BurgerIcon type="primary" />
+              <span className={headertStyles.burgertext}>
+                <p className="text text_type_main-default">Конструктор</p>
+              </span>
+            </a>
           </div>
           <div className={headertStyles.order}>
-            <ListIcon type="secondary" />
-            <span className={headertStyles.ordertext}>
-              <p className="text text_type_main-default">Лента заказов</p>
-            </span>
+            <a href="/">
+              <ListIcon type="secondary" />
+              <span className={headertStyles.ordertext}>
+                <p className="text text_type_main-default">Лента заказов</p>
+              </span>
+            </a>
           </div>
         </div>
         <div className={headertStyles.logowrap}>
@@ -30,10 +34,12 @@ const AppHeader = () => {
           </div>
         </div>
         <div className={headertStyles.roomwrap}>
-          <ProfileIcon type="secondary" />
-          <span className={headertStyles.roomtext}>
-            <p className="text text_type_main-default">Личный кабинет</p>
-          </span>
+          <a href="/">
+            <ProfileIcon type="secondary" />
+            <span className={headertStyles.roomtext}>
+              <p className="text text_type_main-default">Личный кабинет</p>
+            </span>
+          </a>
         </div>
       </div>
     </header>

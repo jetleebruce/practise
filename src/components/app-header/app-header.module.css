@@ -24,13 +24,25 @@
 .burger {
     display: flex;
     align-items: center;
+}
+
+.burger a {
+    display: flex;
     margin-left: 20px;
+    text-decoration: none;
+    color: white;
 }
 
 .order {
-    margin-left: 28px;
+   display: flex;
+   align-items: center;
+}
+
+.order a {
     display: flex;
-    align-items: center;
+    margin-left: 28px;
+    text-decoration: none;
+   
 }
 
 .burgertext {
@@ -56,7 +68,12 @@
 .roomwrap {
     display: flex;
     align-items: center;
+}
+
+.roomwrap a {
+    display: flex;
     margin-right: 20px;
+    text-decoration: none;
 }
 
 .roomtext {
