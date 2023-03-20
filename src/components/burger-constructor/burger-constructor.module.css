@@ -40,6 +40,15 @@
     border: 3px solid #8585AD;  /* creates padding around scroll thumb */
   }
 
+  .card {
+    display: flex;
+    align-items: center;
+  }
+
+  .card svg {
+    margin-right: 8px;
+  }
+
   .order {
     margin-top: 40px;
   }
