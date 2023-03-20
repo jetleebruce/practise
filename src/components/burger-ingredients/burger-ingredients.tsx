@@ -3,17 +3,18 @@ import ingredientsStyles from "./burger-ingredients.module.css";
 import BurgerIngredient from "../../utils/data";
 import { Tab } from "@ya.praktikum/react-developer-burger-ui-components";
 import BurgerIngredientsCard from "./burger-ingredients-card/burger-ingredients-card";
+import { Ingredient } from "../../App";
 
-type BurgerIngredientData = {
-  data: BurgerIngredient[];
-};
 
-const BurgerIngredients = (data: BurgerIngredientData) => {
-  const ingredients = data;
+interface Props {
+  arrIngred: Ingredient[] | undefined;
+}
+
+const BurgerIngredients = ({arrIngred}: Props) => {
   const [current, setCurrent] = useState("one");
-  const buns = ingredients.data.filter((item: BurgerIngredient) => item.type === "bun");
-  const sauces = ingredients.data.filter((item: BurgerIngredient) => item.type === "sauce");
-  const insides = ingredients.data.filter((item: BurgerIngredient) => item.type === "main");
+  const buns = arrIngred?.filter((item: Ingredient) => item.type === "bun");
+  const sauces = arrIngred?.filter((item: Ingredient) => item.type === "sauce");
+  const insides = arrIngred?.filter((item: Ingredient) => item.type === "main");
 
   return (
     <div className={ingredientsStyles.blockwrap}>
@@ -39,7 +40,7 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
             </span>
           </div>
           <div className={ingredientsStyles.cardwrap}>
-            {buns.map((item: BurgerIngredient) => (
+            {buns?.map((item: BurgerIngredient) => (
               <div key={item._id} className={ingredientsStyles.card}>
                 <BurgerIngredientsCard
                   label={item.name}
@@ -55,7 +56,7 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
             </span>
           </div>
           <div className={ingredientsStyles.cardwrap}>
-            {sauces.map((item: BurgerIngredient) => (
+            {sauces?.map((item: BurgerIngredient) => (
               <div key={item._id} className={ingredientsStyles.card}>
                 <BurgerIngredientsCard
                   label={item.name}
@@ -71,7 +72,7 @@ const BurgerIngredients = (data: BurgerIngredientData) => {
             </span>
           </div>
           <div className={ingredientsStyles.cardwrap}>
-            {insides.map((item: BurgerIngredient) => (
+            {insides?.map((item: BurgerIngredient) => (
               <div key={item._id} className={ingredientsStyles.card}>
                 <BurgerIngredientsCard
                   label={item.name}

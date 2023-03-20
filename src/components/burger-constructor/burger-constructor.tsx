@@ -6,19 +6,31 @@ import meat from "../../images/meat-02.png";
 import sp from "../../images/sp.png";
 import mineral from "../../images/mineral-rings.png";
 import substruct from "../../images/subtract.png";
+import { Ingredient } from "../../App";
 
-const BurgerConstructor = () => {
+interface Props {
+  arrIngred: Ingredient[];
+}
+
+const BurgerConstructor = ({ arrIngred }: Props) => {
+
+  const getBunsInfo = arrIngred.find((ingredient) => {
+    return ingredient.type === "bun";
+  });
+
   return (
     <div className={constructorStyles.blockwrap}>
       <div className={constructorStyles.innerBox}>
         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <ConstructorElement
-            type="top"
-            isLocked={true}
-            text="Краторная булка N-200i (верх)"
-            price={200}
-            thumbnail={bunUp}
-          />
+          {getBunsInfo && (
+            <ConstructorElement
+              type="top"
+              isLocked={true}
+              text={`${getBunsInfo.name} (верх)`}
+              price={getBunsInfo.price}
+              thumbnail={getBunsInfo.image}
+            />
+          )}
           <div className={constructorStyles.parent}>
             <div className={constructorStyles.child}>
               <ConstructorElement
